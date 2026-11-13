@@ -1,0 +1,44 @@
+# Konfigurasi Decap CMS untuk portofolio.
+# Backend git-gateway memakai Netlify Identity + Git Gateway (lihat panduan setup).
+backend:
+  name: git-gateway
+  branch: main
+
+# Gambar yang diunggah lewat admin disimpan di folder assets/
+media_folder: "assets"
+public_folder: "/assets"
+
+# Admin tidak mengubah struktur halaman, hanya isi datanya.
+collections:
+  - name: "profil"
+    label: "Profil Halaman Utama"
+    label_singular: "Profil"
+    description: "Isi halaman utama: nama, peran yang berganti, tentang saya, statistik, dan kontak. Perubahan langsung tampil di situs setelah disimpan dan dipublikasikan."
+    files:
+      - name: "profil"
+        label: "Profil"
+        file: "data/profil.json"
+        fields:
+          - { label: "Nama lengkap", name: "nama", widget: "string" }
+          - label: "Peran (tampil bergantian di bagian atas)"
+            name: "peran"
+            widget: "list"
+            summary: "{{fields.peran}}"
+            hint: "Tambah, ubah, atau hapus peran. Urutan menentukan urutan efek mengetik."
+          - { label: "Pengantar (di bawah peran)", name: "pengantar", widget: "text" }
+          - { label: "Foto profil", name: "foto", widget: "image", required: false, hint: "Unggah foto baru untuk mengganti foto profil." }
+          - { label: "Tentang saya (paragraf 1)", name: "tentang", widget: "text" }
+          - { label: "Tentang saya (paragraf 2)", name: "tentang2", widget: "text" }
+          - label: "Statistik"
+            name: "statistik"
+            widget: "list"
+            summary: "{{fields.label}}"
+            hint: "Tambah, ubah, atau hapus angka statistik. Maksimal empat agar tampilannya tetap rapi."
+            fields:
+              - { label: "Angka", name: "angka", widget: "number", value_type: "int" }
+              - { label: "Keterangan", name: "label", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telepon", name: "telepon", widget: "string" }
+          - { label: "Alamat", name: "alamat", widget: "string" }
+          - { label: "Link GitHub (URL lengkap)", name: "github", widget: "string" }
+          - { label: "Link LinkedIn (URL lengkap)", name: "linkedin", widget: "string" }
