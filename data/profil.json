@@ -1,0 +1,36 @@
+{
+  "nama": "I Putu Kevin Theo Surya Pratama",
+  "peran": [
+    "Lulusan Teknologi Informasi",
+    "IoT Developer (ESP32 & Blynk)",
+    "Data Analyst Excel & Power BI",
+    "Pembuat Dashboard Interaktif"
+  ],
+  "pengantar": "Lulusan Sarjana Komputer dengan pengalaman membangun sistem Internet of Things berbasis ESP32 dan Blynk, serta analisis data menggunakan Microsoft Excel dan Power BI.",
+  "foto": "assets/photo.jpg",
+  "tentang": "Saya lulusan bidang teknologi yang terbiasa mengembangkan sistem Internet of Things (IoT) menggunakan ESP32, termasuk integrasi sensor pH tanah dan kelembaban tanah serta monitoring dan kontrol berbasis cloud melalui Blynk. Dalam analisis data, saya menggunakan Microsoft Excel (XLOOKUP, INDEX MATCH, PivotTable, slicer, data validation) dan dashboard Power BI untuk membersihkan, memvalidasi, dan melaporkan dataset hingga 1.000 data.",
+  "tentang2": "Saya mampu menganalisis dan menyelesaikan permasalahan teknis secara sistematis, serta bekerja mandiri maupun dalam tim di bawah tekanan.",
+  "statistik": [
+    {
+      "angka": 1000,
+      "label": "transaksi diolah di Excel"
+    },
+    {
+      "angka": 750,
+      "label": "data mahasiswa dinilai dengan formula"
+    },
+    {
+      "angka": 9,
+      "label": "PivotTable dalam satu dashboard"
+    },
+    {
+      "angka": 6,
+      "label": "chart interaktif"
+    }
+  ],
+  "email": "kevinpratama415@gmail.com",
+  "telepon": "087832983514",
+  "alamat": "Dsn. Nangka Lanung, Desa Benete, Kecamatan Maluk",
+  "github": "https://github.com/kevinpratama415",
+  "linkedin": "https://www.linkedin.com/in/i-putu-kevin-theo-surya-pratama/"
+}
