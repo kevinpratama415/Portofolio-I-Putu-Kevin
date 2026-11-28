@@ -262,17 +262,19 @@
     if(e.key==='ArrowRight'){ e.preventDefault(); go(idx+1); }
   });
 
+  var pointerId=null;
   function down(e){
-    dragging=true; moved=false; startX=e.clientX; startY=e.clientY; dx=0;
-    cards[idx].classList.add('is-dragging');
-    try{ stack.setPointerCapture(e.pointerId); }catch(_){}
+    dragging=true; moved=false; startX=e.clientX; startY=e.clientY; dx=0; pointerId=e.pointerId;
   }
   function move(e){
     if(!dragging) return;
     dx=e.clientX-startX;
     var dy=e.clientY-startY;
     if(Math.abs(dx)>Math.abs(dy)) { moved=moved||Math.abs(dx)>6; }
-    if(moved){ layout(dx); }
+    if(moved){
+      if(pointerId!==null){ try{ stack.setPointerCapture(pointerId); }catch(_){} pointerId=null; }
+      layout(dx);
+    }
   }
   function up(){
     if(!dragging) return;
